@@ -74,7 +74,12 @@ function App() {
   return (
     <div style={{ maxWidth: "600px", margin: "50px auto", textAlign: "center" }}>
       <h1>Tennis AI Coach</h1>
-      <input type="file" accept="image/*" onChange={handleImageChange} />
+      <input
+        aria-label="Upload swing photo"
+        type="file"
+        accept="image/*"
+        onChange={handleImageChange}
+      />
       {compressedPreview && (
         <div style={{ marginTop: "10px" }}>
           <p>Compressed Image Preview:</p>

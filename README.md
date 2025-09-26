@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+🎾 Tennis AI Coach
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tennis AI Coach is a demo project that combines one of my favourite hobbies (tennis!) with my passion for exploring AI developer tools.
+It demonstrates how to build multimodal and agentic experiences using OpenAI APIs — analyzing tennis grip photos and providing intelligent feedback with reasoning and tool results.
 
-## Available Scripts
+![Documentation Page](public/docs/doc-page.png)
 
-In the project directory, you can run:
+✨ Purpose
+---
 
-### `npm start`
+- Learn and engage with OpenAI APIs (multimodal + agents).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Show how to integrate caching, tool-calling, and developer-friendly UIs.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Provide other developers with a clear starting point for their own demos and experiments.
 
-### `npm test`
+🚀 Features
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🖼️ Upload a tennis grip photo → get feedback + summary.
 
-### `npm run build`
+🧠 OpenAI agent reasoning steps displayed in UI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🌤️ Weather tool, 📍 tennis court availability, 👥 friends availability.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔄 LocalStorage cache (no DB needed).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+💻 OpenAI-style chat interface with bubbles, tool results, and emojis.
 
-### `npm run eject`
+Multimodal UI
+![Documentation Page](public/docs/multimodal-page.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Agents UI
+![Documentation Page](public/docs/agent-page.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🛠️ Setup
+Prerequisites
+---
+```
+Node.js (18+)
+```
+```
+npm or yarn
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+API tokens:
+```
+OPENAI_API_KEY → from OpenAI Platform
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+WEATHER_API_KEY → from OpenWeather
+```
 
-## Learn More
+Create a .env file in the project root:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+OPENAI_API_KEY=your_openai_key_here
+WEATHER_API_KEY=your_openweather_key_here
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🖥️ Running the App
+---
+Clone the repo and install dependencies:
 
-### Code Splitting
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Run the frontend:
 
-### Analyzing the Bundle Size
+```
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Runs at http://localhost:3000
 
-### Making a Progressive Web App
+Run the backend proxy (in a separate terminal):
+```
+node server.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Runs at http://localhost:5001
 
-### Advanced Configuration
+⚡ Both must be running simultaneously.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+📂 Project Structure
+---
+```
+/src
+  /projects
+    ChatAgent.js       # Chat UI
+    Multimodal.js      # Grip analyzer
+server.js              # Express proxy + agent tools
+/docs                  # Screenshots + diagrams
+```
+📊 Diagrams
+---
+System Architecture
+![System Architecture](public/docs/system-flow.png)
 
-### Deployment
+Multimodal Analyzer 
+![Multimodal Analyzer Flow](public/docs/tennis-grip-flow.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Agent Reasoning 
+![Agent Reasoning Flow](public/docs/tennis-agent-flow.png)
 
-### `npm run build` fails to minify
+🤝 Contributing
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is meant as a learning demo.
+If you want to extend it (new tools, UI features, or documentation), feel free to open a PR or share ideas.
+
+📚 Learn More
+---
+[OpenAI Docs](https://platform.openai.com/docs)
+
+[Create React App Docs](https://create-react-app.dev/docs/getting-started/) 
+
+[OpenWeather API](https://openweathermap.org)

@@ -29,9 +29,16 @@ It demonstrates how to build multimodal and agentic experiences using OpenAI API
 💻 OpenAI-style chat interface with bubbles, tool results, and emojis.
 
 Multimodal UI
+---
+![Tennis AI Coach Demo](public/docs/tennis-grip-gif.gif)
+
 ![Documentation Page](public/docs/multimodal-page.png)
 
+
 Agents UI
+---
+![Tennis AI Coach Demo](public/docs/tennis-agent-gif.gif)
+
 ![Documentation Page](public/docs/agent-page.png)
 
 🛠️ Setup
